@@ -1,0 +1,18 @@
+Flask==3.0.3
+flask-cors==4.0.1
+python-dotenv==1.0.1
+PyMySQL==1.1.1
+openai==1.51.0
+httpx==0.27.2
+yt-dlp==2024.10.7
+
+
+
+
+
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Utsav-047/AI-Powered-Video-Summarizer-and-Quiz-Generator-.git
+git push -u origin main
