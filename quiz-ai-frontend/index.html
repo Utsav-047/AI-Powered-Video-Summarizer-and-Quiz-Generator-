@@ -124,20 +124,13 @@
     <!-- PANEL 2: Transcript + Summary -->
     <section id="panel-result" class="hidden">
       <div class="panel-card mb-5">
-        <p class="text-xs uppercase tracking-wide mb-3" style="color:#8B93A7;">Transcript excerpt</p>
-        <p class="font-mono text-xs leading-7" style="color:#B7BDCC;">
-          00:12 &mdash; a neural network is a set of layers that transform an input through weighted connections...<br>
-          00:41 &mdash; training adjusts these weights using backpropagation to reduce prediction error...
-        </p>
+        <p class="text-xs uppercase tracking-wide mb-3" style="color:#8B93A7;">Transcript</p>
+        <p id="transcriptText" class="font-mono text-xs leading-7" style="color:#B7BDCC; max-height:200px; overflow-y:auto;"></p>
       </div>
 
       <div class="summary-card mb-5">
         <p class="text-xs uppercase tracking-wide mb-3" style="color:#4FD1B5;">AI summary</p>
-        <p class="text-sm leading-7" style="color:#EDEFF5;">
-          The video introduces neural networks as layered systems of weighted connections.
-          It explains forward passes for prediction and backpropagation for training,
-          then covers activation functions and why non-linearity matters.
-        </p>
+        <p id="summaryText" class="text-sm leading-7" style="color:#EDEFF5;"></p>
       </div>
 
       <button id="toQuizBtn" class="btn-primary w-full">Generate quiz</button>
@@ -145,21 +138,8 @@
 
     <!-- PANEL 3: Quiz -->
     <section id="panel-quiz" class="hidden">
-      <div class="panel-card mb-4 q-card" data-q="1">
-        <p class="text-sm font-medium mb-3">1. What adjusts the weights during training?</p>
-        <label class="quiz-option"><input type="radio" name="q1" value="wrong"> Forward pass</label>
-        <label class="quiz-option"><input type="radio" name="q1" value="right"> Backpropagation</label>
-        <label class="quiz-option"><input type="radio" name="q1" value="wrong2"> Activation function</label>
-      </div>
-
-      <div class="panel-card mb-5 q-card" data-q="2">
-        <p class="text-sm font-medium mb-3">2. Why do networks need non-linear activations?</p>
-        <label class="quiz-option"><input type="radio" name="q2" value="right"> To model complex, non-linear patterns</label>
-        <label class="quiz-option"><input type="radio" name="q2" value="wrong"> To speed up training</label>
-        <label class="quiz-option"><input type="radio" name="q2" value="wrong2"> To reduce file size</label>
-      </div>
-
-      <button id="submitQuizBtn" class="btn-primary w-full">Submit answers</button>
+      <div id="quizContainer"></div>
+      <button id="submitQuizBtn" class="btn-primary w-full mt-1">Submit answers</button>
     </section>
 
     <!-- PANEL: Score -->
