@@ -1,8 +1,12 @@
 from flask import Flask
 from flask_cors import CORS
 
+from routes.video_routes import video_bp
+
 app = Flask(__name__)
-CORS(app)  # allows the frontend (running on a different port) to call this API later
+CORS(app)  # allows the frontend (running on a different port) to call this API
+
+app.register_blueprint(video_bp)
 
 
 @app.route("/")
